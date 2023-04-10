@@ -10,11 +10,13 @@ function App() {
   return (
     <div className="App">
       <div className="display">
-        {activeNumber != null && <span>You clicked {activeNumber}</span>}
+        {hasWon || (activeNumber != null && <span>You clicked {activeNumber}</span>)}
         {hasWon && (
-          <span>
-            You Win! <button onClick={playAgain}>Play Again</button>
-          </span>
+          <div>
+            <h1>You Win!</h1>
+            <p>{activeNumber} is the magic number</p>
+            <button onClick={playAgain}>Play Again</button>
+          </div>
         )}
       </div>
 
