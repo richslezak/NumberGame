@@ -27,6 +27,7 @@ export const useNumberGame = ({ winningNumber, range }: UseNumberGameArgs) => {
     setActiveNumber,
     playAgain: () => {
       setCurrentwinningNumber(currentWinningNumber - 1);
+      setActiveNumber(null);
     },
   };
 };
