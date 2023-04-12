@@ -4,7 +4,6 @@ import { useNumberGame } from './useNumberGame';
 
 function App() {
   const { data, hasWon, activeNumber, setActiveNumber, playAgain } = useNumberGame({
-    winningNumber: 5,
     range: 9,
   });
   return (
