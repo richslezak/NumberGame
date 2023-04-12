@@ -21,7 +21,7 @@ export const useNumberGame = ({ range }: UseNumberGameArgs) => {
 
   useEffect(() => {
     if (hasWon) {
-      alert(`You Win! You guessed ${currentWinningNumber}`);
+      // alert(`You Win! You guessed ${currentWinningNumber}`);
       // setTimeout(() => {
       //   setCurrentWinningNumber(currentWinningNumber - 1);
       // }, 4000);
