@@ -12,7 +12,7 @@ function App() {
         <h1>{hasWon && 'You Win!'}</h1>
         <p className="message">
           {(hasWon && `${activeNumber} is the magic number!`) ||
-            (activeNumber != null && `You clicked ${activeNumber}`)}
+            (activeNumber != null ? `You clicked ${activeNumber}` : 'Play Game')}
         </p>
         <div className="button-container">
           {hasWon && <button onClick={playAgain}>Play Again</button>}
