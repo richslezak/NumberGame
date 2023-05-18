@@ -5,7 +5,13 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(36, 36, 36, 1) 40%,
+    rgba(138, 43, 226, 1) 100%
+  );
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,8 +31,42 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+header {
+  padding: 0.5rem;
+}
+
+header .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-bottom: 10rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: blueviolet;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }

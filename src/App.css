@@ -1,17 +1,37 @@
-#root {
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1280px;
+  min-width: 320px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem 2rem;
   text-align: center;
+}
+
+.settings {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.settings p {
+  font-size: 1.5rem;
+  margin: unset;
+}
+
+.settings select {
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
 .display {
   font-size: 1.5rem;
-  min-height: 200px;
-  margin-bottom: 1rem;
+  min-height: 255px;
+  margin: 0 auto;
 }
 
-h1 {
+h2 {
   font-size: 2.5em;
   line-height: 1.1;
   height: 70px;
@@ -35,11 +55,13 @@ h1 {
 }
 
 .message {
-  height: 40px;
+  min-height: 40px;
+  max-width: 300px;
 }
 
 .button-container {
-  height: 40px;
+  padding: 2rem 0;
+  min-height: 45px;
 }
 
 button {
@@ -47,7 +69,7 @@ button {
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -64,13 +86,14 @@ button:focus-visible {
 
 .game-container {
   display: flex;
-  width: 306px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .game-container div {
+  box-sizing: border-box;
   width: 100px;
   height: 100px;
   background-color: #fff;
