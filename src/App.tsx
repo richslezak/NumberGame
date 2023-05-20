@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNumberGame } from './useNumberGame';
 import './App.css';
 
@@ -14,6 +14,7 @@ function App() {
   const selectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
     setRangeNumber(Number(value));
+    playAgain();
   };
 
   let gameWidth: string;
@@ -32,11 +33,9 @@ function App() {
           <h1>the number game</h1>
           <div className="settings">
             <p>Game Settings</p>
-            <select name="rangeNumber" id="rangeNumber" onChange={selectChange}>
+            <select onChange={selectChange} defaultValue={9}>
               <option value="4">Easy</option>
-              <option value="9" selected>
-                Default
-              </option>
+              <option value="9">Moderate</option>
               <option value="16">Hard</option>
             </select>
           </div>

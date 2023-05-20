@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type DivIndex = number;
 type UseNumberGameArgs = { range: number };
@@ -20,6 +20,11 @@ export const useNumberGame = ({ range }: UseNumberGameArgs) => {
 
   const [currentWinningNumber, setCurrentWinningNumber] = useState(winningNumber);
   const hasWon = activeNumber === currentWinningNumber;
+
+  useEffect(() => {
+    // when setting range in App.tsx (4, 9, 16), Need to change the winning number based on the range.
+    setCurrentWinningNumber(winningNumber);
+  }, [range]);
 
   return {
     data,
